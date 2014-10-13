@@ -2,3 +2,36 @@
 	text-decoration: line-through;
 	color: grey;
 }
+
+body {
+  background: hotpink;
+  }
+
+.list {
+	background: blue;
+	position: absolute;
+  width: 360px;
+  top: 50%;
+  left: 50%;
+	margin: -122px 0 100px -180px;
+}
+
+h2, li {
+		position: relative;
+    background: #1abc9c;
+    color: #fff;
+    margin: 0;
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+li {
+      background: #fff;
+      background: rgba(255,255,255,.15);
+      color: #fff;
+      font-size: 14px;
+      line-height: 24px;
+}
+

@@ -4,12 +4,14 @@
 		<script src="https://code.angularjs.org/1.0.0rc3/angular-1.0.0rc3.min.js"></script>
 		<script src='https://documentcloud.github.io/underscore/underscore-min.js'></script>
 		<script type="text/javascript" src="js/todo.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/todo.css">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/todo.css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+
 	</head>
 	<body>
-		<section ng-controller="TodoCtrl">
-			<h2>Total todos: {{gettotalTodos()}}</h2>
+		<section class="list" ng-controller="TodoCtrl">
+			<h2>TOTAL TODOs: {{gettotalTodos()}}</h2>
 				<ul>
 					<li ng-repeat="todo in todos">
 						<input type="checkbox" ng-model="todo.done">
@@ -20,7 +22,6 @@
 					<input type="text" ng-model="formTodoText" ng-model-instant>
 					<button class="btn" ng-click="addTodo()"><img src="images/add.png"></img>Add</button>
 				</form>
-
 				<button ng-click="clearCompleted()">Clear completed</button>
 		</section>
 	</body>
