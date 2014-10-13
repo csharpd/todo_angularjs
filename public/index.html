@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app> <!-- initialises the app -->
+	<head>
+		<script src="https://code.angularjs.org/1.0.0rc3/angular-1.0.0rc3.min.js"></script>
+		<script src='https://documentcloud.github.io/underscore/underscore-min.js'></script>
+		<script type="text/javascript" src="js/todo.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/todo.css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+	</head>
+	<body>
+		<section ng-controller="TodoCtrl">
+			<h2>Total todos: {{totalTodos}}</h2>
+				<ul>
+					<li ng-repeat="todo in todos">
+						{{todo.text}}
+					</li>
+				</ul>
+		</section>
+	</body>
+</html>
