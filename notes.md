@@ -39,7 +39,7 @@ If you open index.html in a browser you should see the number 4 displayed.
 	$scope.todos = [{text: 'Learn AngularJS', done:false}, {text: 'Build an app', done:false} ];
 ````
 
-2. Loop through the list using ng-repeat
+2. Loop through the list using ng-repeat <-- a binding syntax(??)
 ````
 <ul>
 		<li ng-repeat="todo in todos">
@@ -47,3 +47,19 @@ If you open index.html in a browser you should see the number 4 displayed.
 		</li>
 </ul>
 ````
+
+##Checking off the list of ToDos
+
+1. Add an input type with a ng-model="todo.done".
+<input type="checkbox" ng-model="todo.done">
+
+2. Dynamically bind the class to the todo.done property (true or false)
+
+	<span class="done-{{todo.done}}">{{todo.text}}</span>
+
+3. Todo.css
+.done-true {
+	text-decoration: line-through;
+	color: grey;
+}
+
