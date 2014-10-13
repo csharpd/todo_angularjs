@@ -9,13 +9,17 @@
 	</head>
 	<body>
 		<section ng-controller="TodoCtrl">
-			<h2>Total todos: {{totalTodos}}</h2>
+			<h2>Total todos: {{gettotalTodos()}}</h2>
 				<ul>
 					<li ng-repeat="todo in todos">
 						<input type="checkbox" ng-model="todo.done">
 						<span class="done-{{todo.done}}">{{todo.text}}</span>
 					</li>
 				</ul>
+				<form class="form-horizontal">
+					<input type="text" ng-model="formTodoText" ng-model-instant>
+					<button class="btn" ng-click="addTodo()"><img src="images/add.png"></img>Add</button>
+				</form>
 		</section>
 	</body>
 </html>

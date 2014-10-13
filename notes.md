@@ -51,9 +51,11 @@ If you open index.html in a browser you should see the number 4 displayed.
 ##Checking off the list of ToDos
 
 1. Add an input type with a ng-model="todo.done".
+The chechbox value now controls the todo.done value.
+
 <input type="checkbox" ng-model="todo.done">
 
-2. Dynamically bind the class to the todo.done property (true or false)
+2. Dynamically bind the class of the Todo to the todo.done property (true or false)
 
 	<span class="done-{{todo.done}}">{{todo.text}}</span>
 
@@ -62,4 +64,47 @@ If you open index.html in a browser you should see the number 4 displayed.
 	text-decoration: line-through;
 	color: grey;
 }
+
+##Add new ToDos
+
+1. Create an input field in index.html
+	<form class="form-horizontal">
+		<input type="text" ng-model="formTodoText" ng-model-instant>
+		{{formTodoText}}
+	</form>
+
+#ng-model-instant = every key stroke updates the model so anything you type in the input field will instantly update on the page
+
+2. Add a button to update the Todo list
+	<button class="btn" ng-click="addTodo()"><img src="images/add.png"></img>Add</button>
+
+3.Create an addTodo method which pushes the form input value to the list of todos
+````
+	$scope.addTodo = function () {
+		$scope.todos.push({text:$scope.formTodoText, done:false});
+		$scope.formTodoText = '';
+		// clears out the input field
+	};
+````
+
+## Make the # of Todos' counter Dynamic
+	change --> $scope.totalTodos = 4;
+	for --> 	$scope.totalTodos = $scope.todos.length;
+
+
+N.B The total needs to be updated everytime a todo is added.
+
+change the prior function to ...
+
+	$scope.gettotalTodos = function () {
+		return $scope.todos.length;
+	};
+
+In index.html call get totalTodos
+			<h2>Total todos: {{gettotalTodos()}}</h2>
+
+
+
+
+
 
