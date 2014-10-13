@@ -103,6 +103,22 @@ change the prior function to ...
 In index.html call get totalTodos
 			<h2>Total todos: {{gettotalTodos()}}</h2>
 
+##Remove completed items
+index.html
+
+create a button that calls the method clear completed
+<button ng-click="clearCompleted()">Clear completed</button>
+
+Loop through all the todos and only return the todos that are not done as a result for that filter (Think about a cleaner way to do this)
+
+````
+	$scope.clearCompleted = function () {
+		$scope.todos = _.filter($scope.todos, function(todo){
+			return !todo.done;
+			})
+		};
+````
+
 
 
 
