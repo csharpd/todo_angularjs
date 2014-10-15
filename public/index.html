@@ -19,10 +19,13 @@
 					</li>
 				</ul>
 				<form class="form-horizontal">
-					<input type="text" ng-model="formTodoText" ng-model-instant>
-					<button class="btn" ng-click="addTodo()"><img src="images/add.png"></img>Add</button>
+					<input class="input-box" type="text" ng-model="formTodoText" ng-model-instant>
+					<button class="add-btn" ng-click="addTodo()">+</button>
 				</form>
-				<button ng-click="clearCompleted()">Clear completed</button>
+				<section class="completed">
+					<h3>Clear Completed </h3>
+					<button class="clear" ng-click="clearCompleted()"><img class="jumping" src="images/jumping28.png"></img></button>
+			</section>
 		</section>
 	</body>
 </html>
