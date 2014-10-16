@@ -5,7 +5,7 @@ A simple to do list build using AngularJs, HTML & CSS
 ![](public/images/todo_screenshot.png)
 
 ####Deployed
-To view, visit:
+To view, visit: [http://todo-magic.herokuapp.com/](http://todo-magic.herokuapp.com/)
 
 ###Objectives
 
