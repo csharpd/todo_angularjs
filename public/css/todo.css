@@ -20,7 +20,7 @@ text-align: center;
 margin-top: 7%;
 }
 
-@media all and (max-width: 790px) {
+@media all and (max-width: 870px) {
   h1 {
   	font-size: 70px;
   	margin-top: 13%
