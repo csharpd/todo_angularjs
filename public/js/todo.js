@@ -1,8 +1,9 @@
 function TodoCtrl($scope) {
 
 	$scope.todos = [
-		{text: 'Learn AngularJS', done:false},
-		{text: 'Build an app', done:false}
+		{text: 'Build a ToDo app', done:true},
+		{text: 'Make Pumpkin Pie', done:false},
+		{text: 'Sail the Seven Seas', done:false}
 	];
 
 	$scope.gettotalTodos = function () {

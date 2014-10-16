@@ -6,12 +6,18 @@
 		<script type="text/javascript" src="js/todo.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/todo.css">
+		<link rel="stylesheet" type="text/css" href="css/flaticon.css">
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
 
 	</head>
 	<body>
+		<h1>Magic is what you make</h2>
 		<section class="list" ng-controller="TodoCtrl">
-			<h2>TOTAL TODOs: {{gettotalTodos()}}</h2>
+			<header>
+				<h2 class="title">To Do</h2>
+				<h2>{{gettotalTodos()}}</h2>
+			</header>
 				<ul>
 					<li ng-repeat="todo in todos">
 						<input type="checkbox" ng-model="todo.done">

@@ -4,16 +4,36 @@
 }
 
 body {
-  background: url(/images/mountains.jpeg);
+  background: url(https://static.pexels.com/wp-content/uploads/2014/05/airplane-blue-sky-clouds-265.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   }
 
+h1 {
+font-family: 'Great Vibes', cursive;
+color:white;
+opacity: 0.8;
+font-size: 100px;
+text-align: center;
+margin-top: 7%;
+}
+
+@media all and (max-width: 790px) {
+  h1 {
+  	font-size: 70px;
+  	margin-top: 13%
+  }
+}
+
 .list {
-	background: white;
+
 	position: absolute;
   width: 360px;
   top: 50%;
   left: 50%;
-	margin: -122px 0 100px -180px;
+	margin: -90px 0 100px -180px;
 }
 
 h2, li {
@@ -25,22 +45,35 @@ h2, li {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
+    letter-spacing: 5px;
 }
 
 h2 {
 	letter-spacing: 5px;
 	}
 
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width:100%;
+	background: #1abc9c;
+	opacity:0.9;
+	border-radius: 5px;
+}
+
 li {
       background: #fff;
       background: rgba(255,255,255,.15);
-      color: #666;
+      color: white;
       font-size: 14px;
       line-height: 24px;
 }
 
 .form-horizontal, .completed {
 		height:44px;
+		background: rgba(255,255,255,.15);
 }
 
 .input-box {
@@ -58,8 +91,8 @@ li {
 	font-weight: 300;
 	height: 20px;
 	font-size: 0.8rem;
-	width: 65%;
-	margin: 7px 7px 8px 18px;
+	width: 58%;
+	margin: 7px 7px 8px 42px;
 	}
 
 button {
@@ -81,7 +114,7 @@ button {
 
 .clear {
 	color: #fff;
-	background-color: #bdc3c7;
+	background-color: #00d0ac;
 	border: #bdc3c7;
 	 font-size: 14px;
   padding: 4px 19px;
@@ -90,15 +123,17 @@ button {
 
 .jumping {
 	height: 20px;
-	color: white;
+	color: #666;
+
 }
 
 h3 {
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 24px;
 	font-family: 'Roboto', sans-serif;
 	color: #666;
 	padding-top: 5px;
+	letter-spacing: 5px;
 
 }
 
@@ -106,4 +141,6 @@ h3 {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
+	background: rgba(255,255,255,.15);
+	border-radius: 5px;
 	}
